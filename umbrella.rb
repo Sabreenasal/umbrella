@@ -8,7 +8,7 @@ user_location = "Chicago"
 
 pp user_location
 
-maps_url = "https://maps.googleapis.com/maps/api/geocode/json?address=" + user_location + "Merchandise%20Mart%20Chicago&key" + ENV.fetch("GMAPS_KEY")
+maps_url = "https://maps.googleapis.com/maps/api/geocode/json?address=" + user_location + "Merchandise%20Mart%20Chicago&key=" + ENV.fetch("GMAPS_KEY")
 
 require "http"
 
@@ -24,6 +24,7 @@ results = parsed_response.fetch("results")
 
 first_result = results.at(0)
 
-pp first_result.class
+pp first_result
+
 
   
