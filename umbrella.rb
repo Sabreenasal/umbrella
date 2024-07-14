@@ -24,7 +24,12 @@ results = parsed_response.fetch("results")
 
 first_result = results.at(0)
 
-pp first_result
+geo = first_result.fetch("geometry")
+
+loc = geo.fetch("location")
+
+pp latitude = loc.fetch("lat")
+pp longitude = loc.fetch("lng")
 
 
   
