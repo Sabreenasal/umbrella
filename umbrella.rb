@@ -28,8 +28,25 @@ geo = first_result.fetch("geometry")
 
 loc = geo.fetch("location")
 
-pp latitude = loc.fetch("lat")
-pp longitude = loc.fetch("lng")
+latitude = loc.fetch("lat")
+longitude = loc.fetch("lng")
+
+puts "Your coordinates are #{latitude}, #{longitude}."
+
+pirate_weather_key = ENV.fetch("PIRATE_WEATHER_KEY")
+
+pirate_weather_url = "https://api.pirateweather.net/forecast/#{pirate_weather_key}/#{longitude}/#{latitude}"
 
 
+
+
+
+
+#pp resp
+
+
+
+#Take the lng/lat
+#Asseble correct url for Pirate Weather API
+#Get it, parse it, and dig out the current temp
   
